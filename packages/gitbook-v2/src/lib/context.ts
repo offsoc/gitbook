@@ -13,13 +13,13 @@ import type {
     SiteStructure,
     Space,
 } from '@gitbook/api';
-import { getLogger } from '@v2/app/utils';
 import {
     type GitBookDataFetcher,
     createDataFetcher,
     getDataOrNull,
     throwIfDataError,
 } from '@v2/lib/data';
+import { getLogger } from '@v2/lib/logger';
 import assertNever from 'assert-never';
 import { notFound } from 'next/navigation';
 import { assert } from 'ts-essentials';

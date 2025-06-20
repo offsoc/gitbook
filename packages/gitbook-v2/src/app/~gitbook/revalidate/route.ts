@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
-import { getLogger } from '@v2/app/utils';
+import { getLogger } from '@v2/lib/logger';
 import { withVerifySignature } from '@v2/lib/routes';
 import { revalidateTag } from 'next/cache';
 

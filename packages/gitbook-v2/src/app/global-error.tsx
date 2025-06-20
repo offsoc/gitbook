@@ -1,14 +1,14 @@
 'use client';
 
 import NextError from 'next/error';
-import { getLogger } from './utils';
 
 export default function GlobalError({
     error,
 }: {
     error: Error & { digest?: string };
 }) {
-    getLogger().error('Global error:', error);
+    // We cannot use the logger here because this is a client component.
+    console.error('[GBOV2:GlobalError]', error);
     return (
         <html lang="en">
             <body>
