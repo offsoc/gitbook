@@ -34,7 +34,7 @@ export const config = {
 
 type URLWithMode = { url: URL; mode: 'url' | 'url-host' };
 
-const logger = createLogger('GBOV2:middleware');
+const logger = createLogger('GBOV2:middleware', {});
 
 export async function middleware(request: NextRequest) {
     try {

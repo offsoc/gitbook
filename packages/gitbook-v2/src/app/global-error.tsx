@@ -9,7 +9,7 @@ export default function GlobalError({
     error: Error & { digest?: string };
 }) {
     // We cannot use the logger here because this is a client component.
-    createLogger('GBOV2:GlobalError').error('An error occurred in the application', error);
+    createLogger('GBOV2:GlobalError', {}).error('An error occurred in the application', error);
     return (
         <html lang="en">
             <body>
